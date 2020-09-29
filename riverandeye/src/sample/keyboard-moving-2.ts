@@ -32,6 +32,7 @@ const KeyboardMovingTwo = () => {
   camera.position.set(200, 200, 200);
   camera.lookAt(scene.position);
 
+  //smile
   document.getElementById("output").appendChild(renderer.domElement);
 
   const movingBox = new three.Mesh(
