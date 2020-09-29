@@ -4,4 +4,4 @@ import KeyboardMoving from "./sample/keyboard-moving";
 import importBlender from "./sample/import-blender";
 import KeyboardMovingTwo from "./sample/keyboard-moving-2";
 
-window.onload = KeyboardMovingTwo;
+window.onload = importBlender;

@@ -84,8 +84,8 @@ const KeyboardMoving = () => {
     currentHandle = requestAnimationFrame(updatePosition);
   };
 
-  const updateMovingEvent = (direction: string, isAdd: boolean) => {
-    if (isAdd) {
+  const updateMovingEvent = (direction: string, isKeyDown: boolean) => {
+    if (isKeyDown) {
       if (currentDirection[direction]) return;
 
       currentDirection[direction] = true;

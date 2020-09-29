@@ -56,6 +56,7 @@ const KeyboardMovingTwo = () => {
 
   const updatePosition = () => {
     if (!Object.keys(currentSpeed).every((key) => currentSpeed[key] === 0)) {
+      //
       const { ArrowLeft, ArrowRight, ArrowUp, ArrowDown } = currentSpeed;
       movingBox.translateX(ArrowRight - ArrowLeft);
       movingBox.translateZ(ArrowDown - ArrowUp);
@@ -69,11 +70,8 @@ const KeyboardMovingTwo = () => {
   updatePosition();
 
   const updateMovingEvent = (direction: string, keydown: boolean) => {
-    // 관성 개념을 어떻게 만들어야 할까용
-    // 여기가 아니라, updatePosition에서 해야할거같음.
     if (keydown) {
-      if (currentSpeed[direction] === 0) currentSpeed[direction] = 1;
-      else currentSpeed[direction] += 0.5;
+      currentSpeed[direction] = 1;
     } else {
       currentSpeed[direction] = 0;
     }
